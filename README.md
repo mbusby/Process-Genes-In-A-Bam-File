@@ -79,23 +79,36 @@ For example, chromosome 1 is found after the sequence name (SN:)
 What do the output fields mean?
 
 AnnotationName - name of the annotation
+
 AnnotationType - what type of annotation it is (always gene)
+
 Chromosome - chromosome annotation is on
+
 StartPosition - start position of annotation
+
 EndPos - end position of annotation (add one for length!)
+
 totalReads- how many reads align to the gene.  This includes all reads that overlap the gene at all, even by one base.  Each read pair counts as two reads.  Multiply mapped reads are counted whereever they fall.
+
 uniquePairs - how many pairs align uniquely to the read.
+
 duplicateUniquePairs - how many of the pairs that align uniquely to the gene are duplicates.
+
 tandemUniquePairs - how many of the unique pairs are tandem reads
+
 uniquePairEitherSide - how many unique reads where either read 1 or read 2 is inside the annotation region.
+
 uniqueReads - how many read align uniquely to this region.
+
 totalReadsSameStrand - how many reads are on the same strand as the annotation.  I define "same strand" as follows:
 	First read on the same strand as the annotation
 	 (e.g. + strand if the annotation strand is +)
 	Second read on the opposite strand at the annotation  
 	(e.g. - strand if the annotation strand is +)
 uniqueReadsSameStrand - how many uniquely aligned reads are on the same strand as the annotation
+
 uniquePairEitherSideSameStrand-how many unique reads where either read 1 or read 2 is inside the annotation region and on the same side as the annotation
+
 UniquePairsBothIn-the number of unique pairs where both reads are completely inside the annotation region.
 
 

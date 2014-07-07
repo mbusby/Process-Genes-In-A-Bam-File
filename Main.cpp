@@ -8,8 +8,6 @@
 #include "ReadGFFAnnotation.h"
 #include "ReadChromosomeMap.h"
 
-//g++ *.cpp -L/seq/mbrd/mbusby/Software/bamtools/lib -I/seq/mbrd/mbusby/Software/bamtools/include -I/seq/mbrd/mbusby/Software/bamtools/include/api
-
 
 unsigned int checkErrors();
 void displayHelp();
@@ -507,12 +505,15 @@ unsigned int checkErrors()
 void displayHelp()
 {
 	
-	cout<<"\nThis will count up the barcodes and display them to the screen.  ";	
-	cout<<"\nIf you want to save them to a file pipe them using the unix > command.  ";	
+	
 	cout<<"\nFor example, type something like this: \n";
-	cout<<"CountByBarcode -bam /seq/mbrd/chris/sketchyBamFile.bam > ChrissSketchyBarcodes.txt \n";
+	cout<<"./CountByGenesStrandedness -bam alignmentName.bam -bamIndex alignmentName.bam.bai -gtf annotation.gtf -chrMap chrMap.txt -out outputFile.txt"<<endl;
 	cout<<"\n\nRequired options:\n";	
 	cout<<"-bam Name of the bam file\n";
+	cout<<"-bamIndex Name of the bam file index\n";
+	cout<<"-gtf Annotation of genes\n";
+	cout<<"-chrMap This is a map that maps the chromosome name as it is defined in the bam file with the chromosome name as it is defined in the GTF.\n";
+	cout<<"-out Output file\n";
 }
 
 
